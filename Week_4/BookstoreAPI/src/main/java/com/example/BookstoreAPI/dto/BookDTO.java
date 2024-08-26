@@ -1,11 +1,14 @@
 package com.example.BookstoreAPI.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BookDTO {
+import org.springframework.hateoas.RepresentationModel;
+
+public class BookDTO extends RepresentationModel<BookDTO> {
     @JsonProperty("id")
     private Long id;
 
     @JsonProperty("title")
+
     private String title;
 
     @JsonProperty("author")
